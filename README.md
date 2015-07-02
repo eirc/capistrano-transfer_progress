@@ -1,6 +1,15 @@
 # Capistrano::TransferProgress
 
-TODO: Write a gem description
+Hooks on capistrano transfers and provides a callback that displays a progressbar with current transfer progress.
+
+Can handle:
+* Simultaneous transfers
+* SCP and SFTP
+* Multiple files (recursive)
+* Uploads & Downloads
+
+Cannot handle:
+* SFTP Downloads as they do not report the total file size
 
 ## Installation
 
@@ -18,7 +27,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Add this line to your application's Capfile:
+
+    require 'capistrano-transfer_progress'
+
+That's it!  
+You can now see progress bars on your capistrano transfers looking like this:
+
+    Transfering:    64% |ooooooooooooo       | ETA:   0:02:11
 
 ## Contributing
 
